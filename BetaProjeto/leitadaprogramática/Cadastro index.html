@@ -14,10 +14,11 @@
 <nav style="text-align: center;">
   <a href="Parceiros index.html">Parceiros</a>|
   <a href="Produtos index.html">Lolja</a> |
-   <a href="Dados index.html">Dados</a>|
-     <a href="Sobre index.html">Sobre</a>|
-       <a href="TabelaBey.html">Tabela</a></nav> |
-         <a href="Formulario index.html">Formulario</a></nav> 
+  <a href="Dados index.html">Dados</a>|
+  <a href="Sobre index.html">Sobre</a>|
+  <a href="TabelaBey.html">Tabela</a>|
+  <a href="Formulario index.html">Formulario</a>
+</nav> 
 <hr />
 <main>
   <form style="max-width: 200px; margin: 0 auto;" action="#" method="post">
@@ -40,13 +41,125 @@
 </footer>
 </body>
 </html>
- <style>
-    body {
-      margin: 100;
-      height: 150vh;
-      background-image: url("junior.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo */
+body {
+  background-color: #0f0f0f;
+  color: #eaeaea;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  text-align: center;
+  color: #00ff88;
+}
+
+/* Navegação */
+nav {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  margin: 0 8px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #00ff88;
+  color: #000;
+}
+
+/* Linha */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #00ff88, #4da6ff);
+  margin: 20px 0;
+}
+
+/* Área principal */
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/* Formulário */
+form {
+  width: 100%;
+  max-width: 320px;
+  background-color: #151515;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #00ff88;
+}
+
+/* Labels */
+label {
+  color: #4da6ff;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  background-color: #0f0f0f;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #eaeaea;
+}
+
+/* Foco */
+input:focus {
+  outline: none;
+  border-color: #00ff88;
+  box-shadow: 0 0 5px #00ff88;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #00ff88;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover botão */
+button:hover {
+  background-color: #4da6ff;
+  color: #fff;
+}
+
+/* Erro visual */
+input:invalid {
+  border-color: #ff4444;
+}
+</style>
 
