@@ -1,0 +1,10 @@
+N1=int(input("Digite seu número: "))
+for i in range(1,10):
+ print("SOMA")
+print(f"{N1+i}")
+print("SUB")
+print(f"{N1-i}")
+print("MULTI")
+print(f"{N1*i}")
+print("DIV")
+print(f"{N1/i}")
