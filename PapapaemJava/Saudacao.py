@@ -2,7 +2,9 @@ from datetime import datetime
 agora=datetime.now()
 hora=agora.hour
 minuto=agora.minute
+Nome=input("Digite seu nome: ")
 
+print(Nome+",")
 if 5<= hora  <=12:
  print("Bom dia :D")
 elif 12<= hora <=17:
