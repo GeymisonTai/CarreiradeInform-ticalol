@@ -2,31 +2,31 @@ import java.util.Scanner;
 
 public class NotasCinco {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
 
-        double soma = 0;
-        double maior = 0;
-        double menor = 0;
+        int[] numeros = new int[5];
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Digite o " + i + "º número: ");
-            double num = sc.nextDouble();
-
-            soma += num;
-
-            if (i == 1) {
-                maior = num;
-                menor = num;
-            } else {
-                if (num > maior) maior = num;
-                if (num < menor) menor = num;
-            }
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("digite seus numeros " + i + ": ");
+            numeros[i] = entrada.nextInt();
         }
 
-        System.out.println("Média: " + (soma / 5));
+        System.out.println("valores digitados:");
+        for (int num : numeros) {
+            System.out.println(num);
+        }
+
+        
+        double media = java.util.Arrays.stream(numeros).average().orElse(0.0);
+
+        int maior = java.util.Arrays.stream(numeros).max().orElse(Integer.MIN_VALUE);
+
+        int menor = java.util.Arrays.stream(numeros).min().orElse(Integer.MAX_VALUE);
+
+        System.out.println("Média: " + media);
         System.out.println("Maior: " + maior);
         System.out.println("Menor: " + menor);
 
-        sc.close();
+        entrada.close();
     }
-}
+} 
