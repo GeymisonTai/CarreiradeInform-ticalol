@@ -8,7 +8,7 @@ public class Nsomaesub {
     int N2=scanner.nextInt();
 if(N1 > N2){System.out.println(N1-N2);}
 else if (N2>N1){System.out.println(N2+N1);}
-else{System.out.println("Digite números diferentes,seu porra");}
+else{System.out.println("Digite números diferentes!");}
    scanner.close();
     }
     
