@@ -7,5 +7,5 @@ elif N2>N1:
     Soma=N2+N1
     print(Soma)
 else:
-    print("Digite números diferentes,seu porra")
+    print("Digite números diferentes!")
 
