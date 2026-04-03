@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Opmatemáticas {
+public class Opmat{
     public static void main(String[]args){
     Scanner scanner=new Scanner(System.in);
     System.out.print("Digite seu número: ");
