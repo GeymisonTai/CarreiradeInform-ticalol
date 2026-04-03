@@ -25,6 +25,7 @@ public class Consoantes {
 
         for (int i = 0; i < cont; i++) {
             System.out.print(cons[i] + " ");
+            scanner.close():
         }
     }
 }
