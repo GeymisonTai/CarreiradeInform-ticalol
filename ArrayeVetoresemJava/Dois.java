@@ -10,30 +10,30 @@ public class Dois {
         int[] b = new int[20];
         int[] c = new int[30];
 
-        for (int i = 0; i < 10; i++) {
-            System.out.print("digite A[" + i + "]: ");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print("Digite A[" + i + "]: ");
             a[i] = scanner.nextInt();
         }
 
-        for (int i = 0; i < 20; i++) {
-            System.out.print("digite B[" + i + "]: ");
+        for (int i = 0; i < b.length; i++) {
+            System.out.print("Digite B[" + i + "]: ");
             b[i] = scanner.nextInt();
         }
 
-        for (int i = 0; i < 10; i++) {
-            c[i] = a[i];
-        }
-
-        for (int i = 0; i < 20; i++) {
-            c[i + 10] = b[i];
-        }
+        System.arraycopy(a, 0, c, 0, a.length);
+        System.arraycopy(b, 0, c, a.length, b.length);
 
         Arrays.sort(c);
 
-        System.out.println("vetor c ordenado:");
-        for (int i = 0; i < 30; i++) {
-            System.out.print(c[i] + " ");
+        System.out.println("Vetor C ordenado:");
+        for (int num : c) {
+            System.out.print(num + " ");
+        scanner.close();
+
         }
+
     }
 }
+
+
 
