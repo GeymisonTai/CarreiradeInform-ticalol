@@ -1,0 +1,18 @@
+.contornado{
+    font-family:sans-serif;
+    text-align: center;
+    font-size: 70px;
+    color: rgb(233, 233, 233); 
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.541); 
+}
+
+.cenário{
+    background-color:rgb(255, 230, 0);    
+
+}
+.papapa{
+    font-family:Helvetica;
+    color: black;
+
+}
