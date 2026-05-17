@@ -1,0 +1,54 @@
+
+.Cabaçalho{
+color: rgb(52, 49, 241);
+}
+.Letra1 {
+  color: red;
+}
+.Letra2 {
+  color: orange;
+}
+.Letra3 {
+  color: yellow;
+}
+.Letra4 {
+  color: green;
+}
+.Letra5 {
+  color: blue;
+}
+.Letra6 {
+  color: indigo;
+}
+.Letra7 {
+  color: violet;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(135deg, var(--azul-safira) 0%, var(--verde) 100%);
+    color: var(--branco);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.Titulo{
+    margin-bottom: 10px;
+}
+
+.navbar{
+    margin: 20px;
+}
+
+.footer{
+    margin-top: 30px;
+}
+p {
+    background: linear-gradient(135deg, var(--azul-safira) 0%, #003580 100%);}

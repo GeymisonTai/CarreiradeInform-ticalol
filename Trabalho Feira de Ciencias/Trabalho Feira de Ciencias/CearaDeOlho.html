@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Brasil de Olho</title>
+
+ <link rel="stylesheet" href="Beaba.css">
+ <link rel="icon" href="Logo2.png" type="image/png">
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="Titulo">Brasil de Olho</h1>
+
+<img src="BrasildeOlho.png" width="300" alt="Logo Brasil de Olho">
+    </header>
+
+<nav class="navbar">
+ <a href="Previsao.html">Previsões</a> /
+ <a href="Sobre.html">Sobre</a>
+</nav>
+
+<main>
+<article>
+<h3>
+A alfabetização digital é a capacidade de utilizar tecnologias digitais de forma crítica, consciente e eficiente, permitindo acesso à informação, comunicação e participação social. Já a de[...]
+</h3>
+<h3>Com o avanço da tecnologia, a internet tornou-se essencial para estudar, trabalhar e se comunicar. Porém, milhões de brasileiros ainda não possuem acesso adequado à internet ou às habilidade[...]
+<h3>
+Nesse contexto, a inclusão digital é fundamental para garantir maior participação cidadã e reduzir os impactos da exclusão digital na sociedade.
+</h3>
+<p>Dados sobre Alfabetização Digital</p>
+<p>Apenas 30% dos brasileiros dominam competências digitais básicas.</p>
+<p>Somente 18% realizam tarefas intermediárias, como apresentações e planilhas.</p>
+<p>Apenas 4,2% possuem conhecimentos avançados em programação.</p>
+<p>Cerca de 22 milhões de brasileiros são excluídos digitais.</p>
+<p>38% dos jovens de 20 a 29 anos apresentam alto desempenho digital.</p>
+<p>Entre 40 e 49 anos, apenas 17% possuem desempenho elevado.</p>
+<p>Entre 50 e 64 anos, somente 6% alcançam alto desempenho.</p>
+<p>Jovens e pessoas com maior escolaridade apresentam melhores resultados digitais.</p>
+<p>O ambiente tecnológico familiar influencia no desenvolvimento das habilidades digitais.</p>
+
+ <div class="chart-container" style="width: 80%; max-width: 600px; margin: 30px auto;">
+  <canvas id="competenciasChart"></canvas>
+ </div>
+  <div class="chart-container" style="width: 80%; max-width: 600px; margin: 30px auto;">
+    <canvas id="riquezaChart"></canvas>
+ </div>
+
+ <script>
+const ctx = document.getElementById('competenciasChart').getContext('2d');
+const competenciasChart = new Chart(ctx, {
+        type: 'bar', 
+        data: {
+            labels: ['Básicas', 'Intermediárias', 'Avançadas'], 
+            datasets: [{
+                label: 'Porcentagem (%)', 
+                data: [30, 18, 4.2], 
+                backgroundColor: '#1f77b4', 
+                borderColor: '#1f77b4', 
+                borderWidth: 1 
+            }]
+        },
+});
+
+const ctx2 = document.getElementById('riquezaChart').getContext('2d');
+    const riquezaChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['1% mais rico', '50% mais pobres', 'Restante'],
+            datasets: [{
+                data: [63, 2, 35],
+                backgroundColor: ['#1f77b4', '#ff7f0e', '#2ca02c'],
+                borderColor: ['#1f77b4', '#ff7f0e', '#2ca02c'],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Distribuição da Riqueza no Brasil'
+                },
+                legend: {
+                    position: 'bottom'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ': ' + context.parsed + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+
+</article>
+    </main>
+    <section>
+       <!--Para as referencias de dados bleh--> 
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Brasil de Olho - 2° informática. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
