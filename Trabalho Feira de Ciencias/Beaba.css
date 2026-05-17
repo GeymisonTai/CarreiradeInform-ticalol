@@ -1,6 +1,4 @@
-.Titulo{
-color: rgb(155, 23, 155);
-}
+
 .Cabaçalho{
 color: rgb(52, 49, 241);
 }
@@ -25,9 +23,32 @@ color: rgb(52, 49, 241);
 .Letra7 {
   color: violet;
 }
-.Imagem{
-left: auto;
-width: 10;
-height:10;
 
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
+
+header {
+    background: linear-gradient(135deg, var(--azul-safira) 0%, var(--verde) 100%);
+    color: var(--branco);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.Titulo{
+    margin-bottom: 10px;
+}
+
+.navbar{
+    margin: 20px;
+}
+
+.footer{
+    margin-top: 30px;
+}
+p {
+    background: linear-gradient(135deg, var(--azul-safira) 0%, #003580 100%);}
