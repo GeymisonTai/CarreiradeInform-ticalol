@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrdemdeLista</title>
+    <link rel="stylesheet" href="Guibis.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Organizar as listas BABY </h1>
+        <link rel="icon" href="Savio.jpeg">
+        <img class="Teto" src="Savio.jpeg" width="200" alt="Logo">
+        <div class="inputgrupo"> 
+
+            <input type="text" id="inputdeTarefa" placeholder="Digite aqui Sr.Oraganizado(a)">
+
+            <button onclick="realizarTarefa()">Executar Tarefa</button>
+        </div>
+
+        <p id="contador">Total de tarefas: 0</p>
+
+        <ul id="listadeTarefas"></ul>
+    
+        <button id="LimparTudo" onclick="limparTodas()">Eliminar as Tarefas</button>  
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
