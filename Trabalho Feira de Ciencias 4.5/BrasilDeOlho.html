@@ -1,0 +1,217 @@
+
+ <title>Brasil de Olho</title>
+
+ <link rel="stylesheet" href="Beaba.css">
+ <link rel="icon" href="Logo2.png" type="image/png">
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="Titulo">Brasil de Olho</h1>
+
+<img class="logo-img" src="BrasildeOlho.png" width="300" alt="Logo Brasil de Olho">
+    </header>
+
+<nav class="navbar">
+ <a href="Previsao.html">Previsões</a> /
+ <a href="Sobre.html">Sobre</a>
+</nav>
+
+<main>
+<article>
+<h3>
+A alfabetização digital é a capacidade de utilizar tecnologias digitais de forma crítica, consciente e eficiente, permitindo acesso à informação, comunicação e participação social.
+</h3>
+<h3> Já a de com o avanço da tecnologia, a internet tornou-se essencial para estudar, trabalhar e se comunicar. Porém, milhões de brasileiros ainda não possuem acesso adequado à internet ou às habilidade.
+<h3>
+Nesse contexto, a inclusão digital é fundamental para garantir maior participação cidadã e reduzir os impactos da exclusão digital na sociedade.
+</h3>
+<p class="section-title">Dados sobre Alfabetização Digital</p>
+<div class="data-grid">
+  <div class="popup-card">
+    <span class="popup-badge">Entendimento</span>
+    <p>Apenas 30% dos brasileiros dominam competências digitais básicas.</p>
+  </div>
+  <div class="popup-card">
+    <span class="popup-badge">Contexto</span>
+    <p>Somente 18% realizam tarefas intermediárias, como apresentações e planilhas.</p>
+  </div>
+  <div class="popup-card">
+    <span class="popup-badge">Alerta</span>
+    <p>Apenas 4,2% possuem conhecimentos avançados em programação.</p>
+  </div>
+  <div class="popup-card">  
+    <span class="popup-badge">Impacto</span>
+    <p>Cerca de 22 milhões de brasileiros são excluídos digitais.</p>
+  </div>
+  <div class="popup-card">
+    <span class="popup-badge">Jovens</span>
+    <p>38% dos jovens de 20 a 29 anos apresentam alto desempenho digital.</p>
+  </div>
+  <div class="popup-card">
+    <span class="popup-badge">Meia-idade</span>
+    <p>Entre 40 e 49 anos, apenas 17% possuem desempenho elevado.</p>
+  </div>
+  <div class="popup-card">
+    <span class="popup-badge">Idosos</span>
+    <p>Entre 50 e 64 anos, somente 6% alcançam alto desempenho.</p>
+  </div>
+  <div class="popup-card">
+    <span class="popup-badge">Fatores</span>
+    <p>Jovens e pessoas com maior escolaridade apresentam melhores resultados digitais.</p>
+  </div>
+</div>
+<p>O ambiente tecnológico familiar influencia no desenvolvimento das habilidades digitais.</p>
+
+ <div class="chart-container" style="width: 80%; max-width: 600px; margin: 30px auto;">
+  <canvas id="competenciasChart"></canvas>
+
+Este gráfico apresenta uma projeção otimista da evolução da alfabetização digital nos próximos 10 anos (2026-2035). Baseado em políticas de inclusão digital e investimento em educação tecnológica, espera-se um crescimento progressivo da população com competências digitais básicas.
+Interpretação dos Dados:
+
+    2026 (Atual): 30% da população com competências digitais básicas
+    2028: Projeção de 42% - Aumento de 12 pontos percentuais
+    2030: Projeção de 55% - Crescimento acelerado com políticas públicas
+    2033: Projeção de 68% - Maioria da população alfabetizada digitalmente
+    2035: Projeção de 80% - Meta ambiciosa de inclusão digital
+
+Fatores que contribuem
+ </div>
+  <div class="chart-container" style="width: 80%; max-width: 600px; margin: 30px auto;">
+    <canvas id="riquezaChart"></canvas>
+ </div>
+
+ <script>
+const ctx = document.getElementById('competenciasChart').getContext('2d');
+const competenciasGradient = ctx.createLinearGradient(0, 0, 0, 300);
+competenciasGradient.addColorStop(0, 'rgba(13, 59, 115, 0.95)');
+competenciasGradient.addColorStop(1, 'rgba(31, 138, 76, 0.85)');
+const competenciasChart = new Chart(ctx, {
+        type: 'bar', 
+        data: {
+            labels: ['Básicas', 'Intermediárias', 'Avançadas'], 
+            datasets: [{
+                label: 'Porcentagem (%)', 
+                data: [30, 18, 4.2], 
+                backgroundColor: competenciasGradient,
+                borderColor: 'rgba(13, 59, 115, 0.9)', 
+                borderWidth: 2,
+                borderRadius: 14,
+                borderSkipped: false,
+                hoverBackgroundColor: 'rgba(31, 138, 76, 0.95)'
+            }]
+        },
+        options: {
+            responsive: true,
+            animation: {
+                duration: 1800,
+                easing: 'easeOutQuart',
+                animateScale: true,
+                animateRotate: true
+            },
+            hover: {
+                animationDuration: 300,
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(15, 31, 61, 0.08)'
+                    },
+                    ticks: {
+                        color: '#4d5663'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        color: '#4d5663'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(13, 59, 115, 0.95)',
+                    titleColor: '#ffffff',
+                    bodyColor: '#f8fafc',
+                    borderColor: 'rgba(255,255,255,0.12)',
+                    borderWidth: 1
+                }
+            }
+        }
+});
+
+const ctx2 = document.getElementById('riquezaChart').getContext('2d');
+    const riquezaChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['1% mais rico', '50% mais pobres', 'Restante'],
+            datasets: [{
+                data: [63, 2, 35],
+                backgroundColor: ['#0d3b73', '#1f8a4c', '#f5c300'],
+                borderColor: ['#ffffff', '#ffffff', '#ffffff'],
+                borderWidth: 2,
+                hoverOffset: 20,
+                hoverBorderColor: '#ffffff'
+            }]
+        },
+        options: {
+            responsive: true,
+            animation: {
+                duration: 1800,
+                easing: 'easeOutQuart',
+                animateScale: true,
+                animateRotate: true
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Distribuição da Riqueza no Brasil',
+                    color: '#0d3b73',
+                    padding: {
+                        bottom: 14
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        padding: 18,
+                        color: '#4d5663'
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(13, 59, 115, 0.95)',
+                    titleColor: '#ffffff',
+                    bodyColor: '#f8fafc',
+                    borderColor: 'rgba(255,255,255,0.12)',
+                    borderWidth: 1,
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ': ' + context.parsed + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+ </script>
+
+</article>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2026 Brasil de Olho - 2° informática. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
