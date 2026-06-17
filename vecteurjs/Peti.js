@@ -25,14 +25,27 @@ listadenotas.textContent = notas.join(' / ');
 const soma=notas.reduce((a,b)=> a + b ,0);//como se fosse váriaves:a=notas e b=reduce
 const div=soma / notas.length;
 document.getElementById('Media').textContent=div;
-//exercio 3:
 
-const prd=["arroz","feijão","macarrão","leite","café"];
+//exercio🤓 3:
+const prd=["arroz","feijão","macarrão","leite","café"];//vetor de comida yey
+const dg=document.getElementById('digitos');//pega elementos do que vai ser digitado
+//fazer a função do botão
+function Checagem() {
+    //value pega do dado
+    const produto = dg.value.toLowerCase();//tranforma maiúsculas da string para letras minúsculas
 
+    if (prd.includes(produto)) {
+        console.log("Esse produto existe na loja.");
+        //para aparecer no código html
+        document.getElementById("verificagem").textContent =
+            "Esse produto existe na loja.";
+    } else {
+        console.log("Esse produto não existe na loja.");
+                //para aparecer no código html
+        document.getElementById("verificagem").textContent =
+            "Esse produto não existe na loja.";
+    }
+}
 
+//exercio🤓 4:
 
-
-
-if(digitos == prd){console.log("Produto encontrado");}
-else {console.log("Produto não encontrado");}
-//exercio 4:
