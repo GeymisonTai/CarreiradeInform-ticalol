@@ -77,3 +77,33 @@ if (scriptTag && scriptTag.parentNode) {
 } else {
   document.body.appendChild(secEx4);
 }
+//exercio🤓 4:
+// Recebe o vetor inicial, cria um vetor sem valores repetidos e mostra quantos foram removidos
+const vetorInicial = [10, 5, 8, 3, 5, 7, 8];
+const vetorSemDuplicados = [...new Set(vetorInicial)];
+const quantidadeRemovida = vetorInicial.length - vetorSemDuplicados.length;
+
+console.log('Vetor original:', vetorInicial);
+console.log('Vetor sem duplicados:', vetorSemDuplicados);
+console.log('Quantidade de elementos removidos:', quantidadeRemovida);
+
+// Exibir dinamicamente na página (não precisa alterar o HTML):
+const secEx4 = document.createElement('section');
+secEx4.id = 'exercicio4';
+const tituloEx4 = document.createElement('h2');
+tituloEx4.textContent = '4. Vetor sem duplicados e quantidade removida:';
+const pVetor = document.createElement('p');
+pVetor.textContent = 'Vetor sem duplicados: ' + vetorSemDuplicados.join(', ');
+const pRemovidos = document.createElement('p');
+pRemovidos.textContent = 'Quantidade de elementos removidos: ' + quantidadeRemovida;
+secEx4.appendChild(tituloEx4);
+secEx4.appendChild(pVetor);
+secEx4.appendChild(pRemovidos);
+
+// Insere antes do script atual (se possível) ou no final do body
+const scriptTag = document.currentScript;
+if (scriptTag && scriptTag.parentNode) {
+  scriptTag.parentNode.insertBefore(secEx4, scriptTag);
+} else {
+  document.body.appendChild(secEx4);
+}
