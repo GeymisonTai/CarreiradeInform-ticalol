@@ -57,24 +57,23 @@ console.log('Vetor original:', vetorInicial);
 console.log('Vetor sem duplicados:', vetorSemDuplicados);
 console.log('Quantidade de elementos removidos:', quantidadeRemovida);
 
-// Exibir dinamicamente na página (não precisa alterar o HTML):
-const secEx4 = document.createElement('section');
-secEx4.id = 'exercicio4';
-const tituloEx4 = document.createElement('h2');
-tituloEx4.textContent = '4. Vetor sem duplicados e quantidade removida:';
-const pVetor = document.createElement('p');
-pVetor.textContent = 'Vetor sem duplicados: ' + vetorSemDuplicados.join(', ');
-const pRemovidos = document.createElement('p');
-pRemovidos.textContent = 'Quantidade de elementos removidos: ' + quantidadeRemovida;
-secEx4.appendChild(tituloEx4);
-secEx4.appendChild(pVetor);
-secEx4.appendChild(pRemovidos);
+// Preenche os elementos já presentes no HTML (ids: VetorSemDuplicados e QuantidadeRemovidos)
+const elemVetor = document.getElementById('VetorSemDuplicados');
+const elemRemovidos = document.getElementById('QuantidadeRemovidos');
 
-// Insere antes do script atual (se possível) ou no final do body
-const scriptTag = document.currentScript;
-if (scriptTag && scriptTag.parentNode) {
-  scriptTag.parentNode.insertBefore(secEx4, scriptTag);
+if (elemVetor && elemRemovidos) {
+  // Mantemos o texto base que já existe em VetorSemDuplicados e QuantidadeRemovidos no HTML
+  elemVetor.textContent = 'Vetor sem duplicados: ' + vetorSemDuplicados.join(', ');
+  elemRemovidos.textContent = 'Quantidade de elementos removidos: ' + quantidadeRemovida;
 } else {
-  document.body.appendChild(secEx4);
-}
+  // fallback: caso os elementos não existam, adiciona-os ao final do #exercicio4 ou do body
+  const container = document.getElementById('exercicio4') || document.body;
+  const pVetor = document.createElement('p');
+  pVetor.id = 'VetorSemDuplicados';
+  pVetor.textContent = 'Vetor sem duplicados: ' + vetorSemDuplicados.join(', ');
+  const pRemovidos = document.createElement('p');
+  pRemovidos.id = 'QuantidadeRemovidos';
+  pRemovidos.textContent = 'Quantidade de elementos removidos: ' + quantidadeRemovida;
+  container.appendChild(pVetor);
+  container.appendChild(pRemovidos);
 }
